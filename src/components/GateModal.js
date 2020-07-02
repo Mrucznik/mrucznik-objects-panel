@@ -16,7 +16,7 @@ const GateModal = () => {
                 Dodaj bramę
             </Button>
 
-            <Modal show={show} onHide={handleClose} size="lg" style={{textAlign: "left"}}>
+            <Modal show={show} onHide={handleClose} size="lg">
                 <Modal.Header closeButton>
                     <Modal.Title>Dodawanie bramy</Modal.Title>
                 </Modal.Header>

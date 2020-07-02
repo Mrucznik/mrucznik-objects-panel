@@ -15,7 +15,7 @@ const EntranceModal = () => {
         <>
             <Button variant="outline-danger" size="lg" className="m-2" onClick={handleShow}>Dodaj wejście</Button>
 
-            <Modal show={show} onHide={handleClose} style={{textAlign: "left"}}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Dodawanie wejścia</Modal.Title>
                 </Modal.Header>
