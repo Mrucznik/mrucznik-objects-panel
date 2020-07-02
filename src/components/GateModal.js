@@ -12,7 +12,7 @@ const GateModal = () => {
 
     return (
         <>
-            <Button variant="outline-primary" size="lg" className="m-2" onClick={handleShow}>
+            <Button variant="dark" size="lg" className="m-2" onClick={handleShow}>
                 Dodaj bramę
             </Button>
 

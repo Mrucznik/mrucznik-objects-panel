@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import GateModal from "./GateModal";
 import Col from "react-bootstrap/Col";
 
 const EntranceModal = () => {
@@ -13,7 +12,9 @@ const EntranceModal = () => {
 
     return (
         <>
-            <Button variant="outline-danger" size="lg" className="m-2" onClick={handleShow}>Dodaj wejście</Button>
+            <Button variant="dark" size="lg" className="m-2" onClick={handleShow}>
+                Dodaj wejście
+            </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
