@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: antiquewhite;
 }
 
 .App-header {
@@ -13,3 +14,4 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
