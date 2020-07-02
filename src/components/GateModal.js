@@ -25,7 +25,7 @@ const GateModal = () => {
                     <Form>
                         <Form.Group>
                             <Form.Label>Nazwa</Form.Label>
-                            <Form.Control type="text" placeholder="Nazwa wejścia"/>
+                            <Form.Control type="text" placeholder="Nazwa bramy"/>
                         </Form.Group>
 
                         <Form.Group>
