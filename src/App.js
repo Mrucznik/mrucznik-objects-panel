@@ -20,6 +20,7 @@ import Home from "./pages/Home";
 import Help from "./pages/Help";
 import AdminPanel from "./pages/AdminPanel";
 import Prices from "./pages/Prices";
+import Login from "./pages/Login";
 
 function App() {
     return (
@@ -49,7 +50,7 @@ function App() {
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            Zalogowany jako: <Link to="/logout">John_Mrucznik</Link>
+                            Zalogowany jako: <Link to="/login">John_Mrucznik</Link>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Navbar>
@@ -71,6 +72,9 @@ function App() {
                     </Route>
                     <Route path="/help">
                         <Help/>
+                    </Route>
+                    <Route path="/login">
+                        <Login/>
                     </Route>
                     <Route path="/">
                         <Home/>

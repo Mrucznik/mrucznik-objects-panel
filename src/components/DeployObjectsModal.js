@@ -7,7 +7,6 @@ const DeployObjectsModal = () => {
     let objectsName = "[nazwa obiektów]"
 
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -18,7 +17,7 @@ const DeployObjectsModal = () => {
             </Modal.Header>
 
             <Modal.Body>
-                <p>Trwa wgrywanie obiektów na serwer testowy. Nie zamykaj tego okna</p>
+                <p>Trwa wgrywanie obiektów na serwer testowy...</p>
 
                 <div className="text-center">
                     <Spinner animation="border" role="status">

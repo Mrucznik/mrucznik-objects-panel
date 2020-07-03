@@ -1,6 +1,7 @@
 import React from 'react';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
+import {Link} from "react-router-dom";
 
 const Home = () => {
     return (
@@ -13,7 +14,7 @@ const Home = () => {
                 <br/>
                 Aby używać panelu obiektów, musisz posiadać konto na serwerze Mrucznik Role Play.
             </p>
-            <Button>Zaloguj się</Button>
+            <Button as={Link} to="/login">Zaloguj się</Button>
         </Jumbotron>
     );
 };
