@@ -11,9 +11,8 @@ import './App.css';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import EstateRequest from "./pages/EstateRequest";
-import AcceptEstates from "./pages/AcceptEstates";
-import MyEstates from "./pages/MyEstates";
+import NewProject from "./pages/NewProject";
+import ManageProject from "./pages/ManageProject";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -35,18 +34,18 @@ function App() {
                         Panel obiektów
                     </Navbar.Brand>
                     <Nav>
-                        <Nav.Link as={Link} to="/new">Nowe obiekty</Nav.Link>
+                        <Nav.Link as={Link} to="/projects">Nowe obiekty</Nav.Link>
                         <NavDropdown title="Moje obiekty" id="my-proposals">
-                            <NavDropdown.Item as={Link} to="/objects/dom1">
+                            <NavDropdown.Item as={Link} to="/projects/1">
                                 Projekt domu 1
                             </NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/objects/dom2">
+                            <NavDropdown.Item as={Link} to="/projects/2">
                                 Projekt domu 2
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/admin">Panel administracyjny</Nav.Link>
-                        <Nav.Link as={Link} to="/help">Pomoc</Nav.Link>
                         <Nav.Link as={Link} to="/prices">Cennik</Nav.Link>
+                        <Nav.Link as={Link} to="/help">Pomoc</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
@@ -58,23 +57,20 @@ function App() {
 
             <main>
                 <Switch>
-                    <Route path="/new">
-                        <EstateRequest/>
+                    <Route path="/projects">
+                        <NewProject/>
                     </Route>
-                    <Route path="/objects">
-                        <MyEstates/>
-                    </Route>
-                    <Route path="/admin/objects">
-                        <AcceptEstates/>
+                    <Route path="/admin/projects">
+                        <ManageProject/>
                     </Route>
                     <Route path="/admin">
                         <AdminPanel/>
                     </Route>
-                    <Route path="/help">
-                        <Help/>
-                    </Route>
                     <Route path="/prices">
                         <Prices/>
+                    </Route>
+                    <Route path="/help">
+                        <Help/>
                     </Route>
                     <Route path="/">
                         <Home/>

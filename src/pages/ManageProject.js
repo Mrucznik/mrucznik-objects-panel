@@ -4,9 +4,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
-import Modal from "react-bootstrap/Modal";
 
-const AcceptEstates = () => {
+const ManageProject = () => {
     return (
         <div>
             <ObjectsEditor/>
@@ -24,4 +23,4 @@ const AcceptEstates = () => {
     );
 };
 
-export default AcceptEstates;
+export default ManageProject;

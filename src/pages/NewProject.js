@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-const EstateRequest = () => {
+const NewProject = () => {
     return (
         <div>
             <ObjectsEditor/>
@@ -19,4 +19,4 @@ const EstateRequest = () => {
     );
 };
 
-export default EstateRequest;
+export default NewProject;

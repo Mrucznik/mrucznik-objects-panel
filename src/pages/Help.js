@@ -1,7 +1,15 @@
 import React from 'react';
 import Jumbotron from "react-bootstrap/Jumbotron";
+import NewProjectModal from "../components/NewProjectModal";
+import DeployObjectsModal from "../components/DeployObjectsModal";
+import Button from "react-bootstrap/Button";
 
 const Help = () => {
+    let modalClick = {};
+    function OnClick() {
+        modalClick.xd()
+    }
+
     return (
         <Jumbotron>
             <h1>Pomoc</h1>
@@ -18,6 +26,11 @@ const Help = () => {
             <span>
                 Lorem ipsum
             </span>
+
+            <NewProjectModal showFunction={modalClick}/>
+            <Button onClick={OnClick}/>
+
+            <DeployObjectsModal/>
         </Jumbotron>
     );
 };
