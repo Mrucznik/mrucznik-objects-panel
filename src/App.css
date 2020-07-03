@@ -13,3 +13,8 @@
   min-height: 100%;
   font-size: small;
 }
+
+.col-button {
+  width: 100%;
+  min-width: 42px;
+}

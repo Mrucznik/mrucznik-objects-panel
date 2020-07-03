@@ -21,12 +21,12 @@ const Gate = () => {
                         Brama garażowa
                     </Col>
                     <Col xs={6} lg={2}>
-                        <Button variant="outline-dark" onClick={onClicked} style={{width: "100%"}}>
+                        <Button variant="outline-dark" onClick={onClicked} className="col-button">
                             <FontAwesomeIcon icon={faEdit} />
                         </Button>
                     </Col>
                     <Col xs={6} lg={2}>
-                        <Button variant="outline-danger" style={{width: "100%"}}>
+                        <Button variant="outline-danger" className="col-button">
                             <FontAwesomeIcon icon={faTrash} />
                         </Button>
                     </Col>
