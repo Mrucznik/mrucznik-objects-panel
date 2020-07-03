@@ -20,6 +20,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Home from "./pages/Home";
 import Help from "./pages/Help";
 import AdminPanel from "./pages/AdminPanel";
+import Prices from "./pages/Prices";
 
 function App() {
     return (
@@ -45,6 +46,7 @@ function App() {
                         </NavDropdown>
                         <Nav.Link as={Link} to="/admin">Panel administracyjny</Nav.Link>
                         <Nav.Link as={Link} to="/help">Pomoc</Nav.Link>
+                        <Nav.Link as={Link} to="/prices">Cennik</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
@@ -70,6 +72,9 @@ function App() {
                     </Route>
                     <Route path="/help">
                         <Help/>
+                    </Route>
+                    <Route path="/prices">
+                        <Prices/>
                     </Route>
                     <Route path="/">
                         <Home/>

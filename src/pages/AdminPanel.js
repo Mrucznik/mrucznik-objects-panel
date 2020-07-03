@@ -3,14 +3,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUpload, faProjectDiagram, faEdit, faCheck, faBan} from "@fortawesome/free-solid-svg-icons";
-import Button from "react-bootstrap/Button";
 import Project from "../components/Project";
 
 const AdminPanel = () => {
     return (
-        <Container fluid>
+        <Container fluid className="mb-3">
             <Row className="text-center">
                 <Col>
                     <h1>Projekty</h1>
