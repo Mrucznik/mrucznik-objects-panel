@@ -17,8 +17,8 @@ const Gate = () => {
             <Container>
                 <Row>
                     <Col xs={12} lg={8}>
-                        <FontAwesomeIcon icon={faToriiGate} size="lg" className="mr-1" />
-                        Brama
+                        <FontAwesomeIcon icon={faToriiGate} size="lg" className="mr-1" />{' '}
+                        Brama garażowa
                     </Col>
                     <Col xs={6} lg={2}>
                         <Button variant="outline-dark" onClick={onClicked} style={{width: "100%"}}>

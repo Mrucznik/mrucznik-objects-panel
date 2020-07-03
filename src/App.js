@@ -18,15 +18,20 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Home from "./pages/Home";
+import Help from "./pages/Help";
+import AdminPanel from "./pages/AdminPanel";
 
 function App() {
     return (
         <Router>
             <header className="App-header">
                 <Navbar variant="dark">
+                    {/*<Navbar.Brand href="https://mrucznik-rp.pl">*/}
+                    {/*    <img src="https://i.imgur.com/xlMSHLx.png" alt="Mrucznik Role Play" height={86}/>*/}
+                    {/*</Navbar.Brand>*/}
                     <Navbar.Brand as={Link} to="/">
-                        <img src={Yarn} alt={"Logo"} width={48} height={48} className="mr-3"/>
-                        Mrucznik Role Play - panel obiektów
+                        <img src={Yarn} alt={"Logo"} width={60} height={60} className="mr-3"/>
+                        Panel obiektów
                     </Navbar.Brand>
                     <Nav>
                         <Nav.Link as={Link} to="/new">Nowe obiekty</Nav.Link>
@@ -38,7 +43,8 @@ function App() {
                                 Projekt domu 2
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link as={Link} to="/admin">Akceptuj obiekty</Nav.Link>
+                        <Nav.Link as={Link} to="/admin">Panel administracyjny</Nav.Link>
+                        <Nav.Link as={Link} to="/help">Pomoc</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
@@ -50,14 +56,20 @@ function App() {
 
             <main>
                 <Switch>
-                    <Route path="/admin">
-                        <AcceptEstates/>
+                    <Route path="/new">
+                        <EstateRequest/>
                     </Route>
                     <Route path="/objects">
                         <MyEstates/>
                     </Route>
-                    <Route path="/new">
-                        <EstateRequest/>
+                    <Route path="/admin/objects">
+                        <AcceptEstates/>
+                    </Route>
+                    <Route path="/admin">
+                        <AdminPanel/>
+                    </Route>
+                    <Route path="/help">
+                        <Help/>
                     </Route>
                     <Route path="/">
                         <Home/>

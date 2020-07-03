@@ -7,6 +7,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Badge from "react-bootstrap/Badge";
 
 const Entrance = () => {
     function onClicked() {
@@ -18,8 +19,8 @@ const Entrance = () => {
             <Container>
                 <Row>
                     <Col xs={12} lg={8}>
-                        <FontAwesomeIcon icon={faDoorOpen} size="lg" className="mr-1" />
-                        Wejście
+                        <FontAwesomeIcon icon={faDoorOpen} size="lg" className="mr-1" />{' '}
+                        Drzwi do baru
                     </Col>
                     <Col xs={6} lg={2}>
                         <Button variant="outline-dark" onClick={onClicked} style={{width: "100%"}}>

@@ -3,10 +3,13 @@
 
 .App-header {
   background-color: #282c34;
-  /*min-height: 10vh;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: center;*/
-  /*font-size: calc(10px + 2vmin);*/
   color: white;
+}
+
+.info-container {
+  padding: 1vh 1vw;
+  border-radius: 5px 5px 5px 5px;
+  background: rgba(176, 196, 222, 0.29);
+  min-height: 100%;
+  font-size: small;
 }
