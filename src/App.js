@@ -21,6 +21,7 @@ import Help from "./pages/Help";
 import AdminPanel from "./pages/AdminPanel";
 import Prices from "./pages/Prices";
 import Login from "./pages/Login";
+import TextureStudio from "./pages/TextureStudio";
 
 function App() {
     return (
@@ -44,8 +45,10 @@ function App() {
                                 Projekt domu 2
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link as={Link} to="/texturestudio">Serwer Texture Studio</Nav.Link>
                         <Nav.Link as={Link} to="/admin">Panel administracyjny</Nav.Link>
                         <Nav.Link as={Link} to="/prices">Cennik</Nav.Link>
+                        <Nav.Link as={Link} to="/help">Rynek</Nav.Link>
                         <Nav.Link as={Link} to="/help">Pomoc</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
@@ -63,6 +66,9 @@ function App() {
                     </Route>
                     <Route path="/admin/projects">
                         <ManageProject/>
+                    </Route>
+                    <Route path="/texturestudio">
+                        <TextureStudio/>
                     </Route>
                     <Route path="/admin">
                         <AdminPanel/>
