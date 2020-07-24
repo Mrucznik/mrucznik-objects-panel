@@ -1,14 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import auth from "../services/auth";
+import {useForm} from "react-hook-form";
+import Redirect from "react-router-dom/es/Redirect";
 
 const Login = () => {
-    return (
-        <Jumbotron style={{minHeight: "66vh"}}>
+    const [end, setEnd] = useState(false);
+
+    const {register, handleSubmit, errors} = useForm();
+    const onSubmit = data => {
+        auth.login(data.nick, data.password).then(() => {
+            setEnd(true)
+        });
+    };
+
+    return (!end ? <Jumbotron style={{minHeight: "66vh"}}>
             <Modal.Dialog style={{minWidth: "33vw"}}>
-                <Form>
+                <Form onSubmit={handleSubmit(onSubmit)}>
                     <Modal.Header className="text-center">
                         <h3>Logowanie</h3>
                     </Modal.Header>
@@ -20,11 +31,11 @@ const Login = () => {
 
                         <Form.Group>
                             <Form.Label>Login</Form.Label>
-                            <Form.Control type="text" placeholder="Nick w grze"/>
+                            <Form.Control name="nick" type="text" placeholder="Nick w grze" ref={register}/>
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Hasło</Form.Label>
-                            <Form.Control type="password" placeholder="Hasło"/>
+                            <Form.Control name="password" type="password" placeholder="Hasło" ref={register}/>
                         </Form.Group>
                     </Modal.Body>
 
@@ -33,7 +44,7 @@ const Login = () => {
                     </Modal.Footer>
                 </Form>
             </Modal.Dialog>
-        </Jumbotron>
+        </Jumbotron> : <Redirect to={"/projects"}/>
     );
 };
 

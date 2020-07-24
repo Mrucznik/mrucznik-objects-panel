@@ -1,9 +1,10 @@
 import React from 'react';
+import auth from "../services/auth";
 
 const TextureStudio = () => {
     return (
         <div>
-            TextureStudio
+            {auth.isAuthenticated() ? "Zalogowany " + auth.getSession().id : "Niezalogowany"}
         </div>
     );
 };

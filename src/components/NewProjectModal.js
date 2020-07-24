@@ -3,7 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import PropTypes from "prop-types";
-import Project from "./Project";
 
 const NewProjectModal = props => {
     const [show, setShow] = useState(false);

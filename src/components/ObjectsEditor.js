@@ -6,11 +6,8 @@ import Entrance from "./entrances/Entrance";
 import Gate from "./gates/Gate";
 import GateModal from "./gates/GateModal";
 import EntranceModal from "./entrances/EntranceModal";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ObjectsCode from "../components/ObjectsCode";
-import ProcessingError from "./ProcessingError";
 import ObjectsInfo from "./ObjectsInfo";
 import Valuation from "./Valuation";
 

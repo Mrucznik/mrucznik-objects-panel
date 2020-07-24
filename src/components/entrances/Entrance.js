@@ -7,7 +7,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Badge from "react-bootstrap/Badge";
 
 const Entrance = () => {
     function onClicked() {

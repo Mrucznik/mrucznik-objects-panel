@@ -8,7 +8,6 @@ import {faBan, faCheck, faEdit, faProjectDiagram, faUpload} from "@fortawesome/f
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import {Link} from "react-router-dom";
-import Form from "react-bootstrap/Form";
 
 const Project = props => {
     let variant;
