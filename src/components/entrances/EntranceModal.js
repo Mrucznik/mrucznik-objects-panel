@@ -7,22 +7,7 @@ import Col from "react-bootstrap/Col";
 
 import {useForm} from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers';
-import * as yup from "yup";
-import { setLocale } from 'yup';
-
-setLocale({
-    mixed: {
-        default: 'Niepoprawne dane!',
-        required: 'Pole wymagane!',
-        notType: 'Niepoprawne dane!'
-    },
-    string: {
-        // eslint-disable-next-line no-template-curly-in-string
-        min: "Pole musi posiadać co najmniej ${min} znaków",
-        // eslint-disable-next-line no-template-curly-in-string
-        max: "Pole musi posiadać nie więcej niż ${max} znaków",
-    }
-});
+import yup from "../../validations";
 
 const validationSchema = yup.object().shape({
     entryName: yup.string().max(64).required(),
@@ -43,7 +28,7 @@ const validationSchema = yup.object().shape({
 const EntranceModal = () => {
     const [show, setShow] = useState(false);
 
-    const {register, handleSubmit, control, errors} = useForm({
+    const {register, handleSubmit, errors} = useForm({
         resolver: yupResolver(validationSchema)
     });
     const onSubmit = data => console.log(data);
@@ -84,19 +69,22 @@ const EntranceModal = () => {
                             </Form.Group>
                             <Form.Row>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="outX" placeholder="x" ref={register} isInvalid={!!errors.outX}/>
+                                    <Form.Control type="text" name="outX" placeholder="x" ref={register}
+                                                  isInvalid={!!errors.outX}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.outX?.message}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="outY" placeholder="y" ref={register} isInvalid={!!errors.outY}/>
+                                    <Form.Control type="text" name="outY" placeholder="y" ref={register}
+                                                  isInvalid={!!errors.outY}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.outY?.message}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="outZ" placeholder="z" ref={register} isInvalid={!!errors.outZ}/>
+                                    <Form.Control type="text" name="outZ" placeholder="z" ref={register}
+                                                  isInvalid={!!errors.outZ}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.outZ?.message}
                                     </Form.Control.Feedback>
@@ -104,13 +92,15 @@ const EntranceModal = () => {
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="outVW" placeholder="virtual world" ref={register} isInvalid={!!errors.outVW}/>
+                                    <Form.Control type="text" name="outVW" placeholder="virtual world" ref={register}
+                                                  isInvalid={!!errors.outVW}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.outVW?.message}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="outInt" placeholder="interior" ref={register} isInvalid={!!errors.outInt}/>
+                                    <Form.Control type="text" name="outInt" placeholder="interior" ref={register}
+                                                  isInvalid={!!errors.outInt}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.outInt?.message}
                                     </Form.Control.Feedback>
@@ -121,26 +111,30 @@ const EntranceModal = () => {
                         <Form.Group>
                             <Form.Label>Wyjście (w środku interioru)</Form.Label>
                             <Form.Group>
-                                <Form.Control type="text" name="inText3D" placeholder="Text 3D" ref={register} isInvalid={!!errors.inText3D}/>
+                                <Form.Control type="text" name="inText3D" placeholder="Text 3D" ref={register}
+                                              isInvalid={!!errors.inText3D}/>
                                 <Form.Control.Feedback type="invalid">
                                     {errors.inText3D?.message}
                                 </Form.Control.Feedback>
                             </Form.Group>
                             <Form.Row>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="inX" placeholder="x" ref={register} isInvalid={!!errors.inX}/>
+                                    <Form.Control type="text" name="inX" placeholder="x" ref={register}
+                                                  isInvalid={!!errors.inX}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.inX?.message}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="inY" placeholder="y" ref={register} isInvalid={!!errors.inY}/>
+                                    <Form.Control type="text" name="inY" placeholder="y" ref={register}
+                                                  isInvalid={!!errors.inY}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.inY?.message}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="inZ" placeholder="z" ref={register} isInvalid={!!errors.inZ}/>
+                                    <Form.Control type="text" name="inZ" placeholder="z" ref={register}
+                                                  isInvalid={!!errors.inZ}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.inZ?.message}
                                     </Form.Control.Feedback>
@@ -148,13 +142,15 @@ const EntranceModal = () => {
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="inVW" placeholder="virtual world" ref={register} isInvalid={!!errors.inVW}/>
+                                    <Form.Control type="text" name="inVW" placeholder="virtual world" ref={register}
+                                                  isInvalid={!!errors.inVW}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.inVW?.message}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col}>
-                                    <Form.Control type="text" name="inInt" placeholder="interior" ref={register} isInvalid={!!errors.inInt}/>
+                                    <Form.Control type="text" name="inInt" placeholder="interior" ref={register}
+                                                  isInvalid={!!errors.inInt}/>
                                     <Form.Control.Feedback type="invalid">
                                         {errors.inInt?.message}
                                     </Form.Control.Feedback>
