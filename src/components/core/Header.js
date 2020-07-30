@@ -33,7 +33,7 @@ const Header = () => {
                                         Projekt domu 2
                                     </NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link as={Link} to="/texturestudio">Serwer Texture Studio</Nav.Link>
+                                <Nav.Link as={Link} to="/texturestudio">Texture Studio</Nav.Link>
                                 <Nav.Link as={Link} to="/admin">Panel administracyjny</Nav.Link>
                                 <Nav.Link as={Link} to="/prices">Cennik</Nav.Link>
                                 <Nav.Link as={Link} to="/help">Rynek</Nav.Link>
